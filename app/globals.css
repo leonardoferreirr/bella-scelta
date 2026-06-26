@@ -54,7 +54,10 @@ ul{margin:0;padding:0;list-style:none}
     radial-gradient(55% 75% at 88% 18%, var(--lilac), transparent 60%),
     radial-gradient(65% 65% at 72% 96%, var(--peach), transparent 62%),
     var(--paper);}
-.hero__in{padding:clamp(60px,10vw,130px) 0 clamp(48px,7vw,96px);max-width:840px}
+.hero__in{position:relative;z-index:2;padding:clamp(60px,10vw,130px) 0 clamp(48px,7vw,96px);max-width:620px}
+.hero__art{position:absolute;z-index:1;right:clamp(20px,5vw,80px);top:50%;transform:translateY(-50%);
+  width:min(36%,430px);aspect-ratio:4/5;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
+@media(max-width:900px){.hero__art{display:none}.hero__in{max-width:none}}
 .hero__kicker{font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--rose);margin-bottom:18px}
 .hero h1{font-size:clamp(3rem,9vw,6.4rem);line-height:.92}
 .hero p{margin:1.4rem 0 2rem;max-width:480px;color:#5c5366;font-size:1.08rem}
@@ -104,8 +107,8 @@ ul{margin:0;padding:0;list-style:none}
 .band{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:clamp(40px,6vw,72px) 0}
 @media(max-width:760px){.band{grid-template-columns:1fr}}
 .tile{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:300px;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--ink)}
-.tile--a{background:radial-gradient(120% 120% at 0% 0%,var(--blush),var(--lilac))}
-.tile--b{background:radial-gradient(120% 120% at 100% 0%,var(--peach),var(--blush))}
+.tile--a{background:linear-gradient(to top,rgba(253,251,252,.94),rgba(253,251,252,.45) 38%,rgba(253,251,252,0) 72%),url(/banners/tile-skin.webp);background-size:cover;background-position:center}
+.tile--b{background:linear-gradient(to top,rgba(253,251,252,.94),rgba(253,251,252,.45) 38%,rgba(253,251,252,0) 72%),url(/banners/tile-hair.webp);background-size:cover;background-position:center}
 .tile h3{font-size:clamp(1.8rem,3.5vw,2.6rem)}
 .tile p{margin:.5rem 0 1rem;max-width:300px;color:#5c5366;font-size:.96rem}
 .tile a{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;border-bottom:2px solid var(--rose);padding-bottom:2px;width:fit-content}

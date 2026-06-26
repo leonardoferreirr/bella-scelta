@@ -16,12 +16,13 @@ function fmt(n) {
   try { return new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR" }).format(n); }
   catch { return `€${Number(n).toFixed(2)}`; }
 }
+const sized = (u) => (u ? u.replace(/\/w_\d+,h_\d+,/, "/w_600,h_600,") : u);
 function imgs(p) {
   const items = (p.media?.items || []).map((m) => m?.image?.url).filter(Boolean);
   const main = p.media?.mainMedia?.image?.url;
   const a = items[0] || main || null;
   const b = items[1] || a;
-  return { a, b };
+  return { a: sized(a), b: sized(b) };
 }
 
 export default function Page() {
@@ -83,6 +84,7 @@ export default function Page() {
       </header>
 
       <section className="hero">
+        <img className="hero__art" src="/banners/hero.webp" alt="" fetchPriority="high" />
         <div className="container hero__in">
           <div className="hero__kicker">Belleza · Autocuidado · España</div>
           <h1>La belleza<br />es una <span className="it">elección</span></h1>

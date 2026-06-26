@@ -94,7 +94,7 @@ ul{margin:0;padding:0;list-style:none}
   letter-spacing:.08em;text-transform:uppercase;padding:.4em .7em;border-radius:999px}
 .card__name{font-weight:600;font-size:1rem;line-height:1.25}
 .price{display:flex;align-items:baseline;gap:.5rem}
-.price .now{font-family:var(--font-display),serif;font-weight:700;color:var(--ink);font-size:1.2rem}
+.price .now{font-family:var(--font-body),sans-serif;font-weight:700;color:var(--ink);font-size:1.08rem}
 .price .was{text-decoration:line-through;color:var(--muted);font-size:.86rem}
 .add{margin-top:2px;background:transparent;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;
   padding:.7em 1em;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;transition:.22s}
@@ -140,7 +140,7 @@ ul{margin:0;padding:0;list-style:none}
 .li{display:flex;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
 .li small{color:var(--muted)}
 .drawer__f{padding:22px;border-top:1px solid var(--line)}
-.subtotal{display:flex;justify-content:space-between;font-family:var(--font-display),serif;font-weight:700;margin-bottom:14px;font-size:1.15rem}
+.subtotal{display:flex;justify-content:space-between;font-family:var(--font-body),sans-serif;font-weight:700;margin-bottom:14px;font-size:1.05rem}
 .checkout{width:100%;background:var(--btn);color:#fff;border-radius:999px;padding:1.05em;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;transition:.22s}
 .checkout:hover{background:var(--rose-2)}
 .empty{color:var(--muted);text-align:center;padding:40px 0}

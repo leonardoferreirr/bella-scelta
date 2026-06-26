@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Fraunces, Archivo } from "next/font/google";
+import { CartProvider, Chrome } from "../components/store";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -17,7 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${display.variable} ${body.variable}`}>
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          <Chrome>{children}</Chrome>
+        </CartProvider>
+      </body>
     </html>
   );
 }

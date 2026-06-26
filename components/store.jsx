@@ -54,7 +54,7 @@ export function Chrome({ children }) {
 
       <header className="hd">
         <div className="container hd__in">
-          <Link className="brand" href="/">Bella <em>Scelta</em></Link>
+          <Link className="brand" href="/" aria-label="Bella Scelta"><img src="/bella-logo.svg" alt="Bella Scelta" width="150" height="41" /></Link>
           <nav className="hd__nav">
             <Link href="/#tienda">Tienda</Link>
             <Link href="/#tienda">Cuidado de la Piel</Link>
@@ -69,7 +69,7 @@ export function Chrome({ children }) {
       <footer className="ft">
         <div className="container ft__grid">
           <div className="ft__col">
-            <div className="ft__brand">Bella <em>Scelta</em></div>
+            <div className="ft__brand"><img src="/bella-logo-light.svg" alt="Bella Scelta" width="172" height="47" /></div>
             <p style={{ maxWidth: 240, marginTop: 10, opacity: .85 }}>Belleza y autocuidado, con envío a toda España.</p>
           </div>
           <div className="ft__col">

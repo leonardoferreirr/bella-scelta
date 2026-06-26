@@ -39,6 +39,7 @@ ul{margin:0;padding:0;list-style:none}
 .hd__in{display:flex;align-items:center;justify-content:space-between;height:70px}
 .brand{font-family:var(--font-display),serif;font-weight:900;font-size:1.7rem;letter-spacing:-.02em}
 .brand em{font-style:italic;color:var(--rose);font-weight:600}
+.brand img{height:30px;width:auto;display:block}
 .hd__nav{display:flex;gap:28px;font-size:.9rem;font-weight:500}
 .hd__nav button{text-transform:uppercase;letter-spacing:.06em;color:var(--ink);opacity:.8}
 .hd__nav button:hover{opacity:1;color:var(--rose)}
@@ -123,6 +124,7 @@ ul{margin:0;padding:0;list-style:none}
 .ft__grid{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between}
 .ft__brand{font-family:var(--font-display),serif;font-weight:900;font-size:1.9rem}
 .ft__brand em{font-style:italic;color:var(--rose);font-weight:600}
+.ft__brand img{height:34px;width:auto;display:block}
 .ft h4{font-family:var(--font-body);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#a99fb8;margin:0 0 12px}
 .ft__col p{margin:0 0 9px;font-size:.92rem}
 .ft small{display:block;margin-top:30px;opacity:.6;font-size:.82rem}

@@ -8,7 +8,7 @@ export default async function Page() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero" aria-label="Bella Scelta, belleza y autocuidado">
         <div className="container hero__in">
           <h1>La belleza<br />es una <span className="it">elección</span></h1>
           <p>Productos seleccionados para tu rutina de cuidado, con envío a toda España.</p>

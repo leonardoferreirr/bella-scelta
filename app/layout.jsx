@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Fraunces, Archivo } from "next/font/google";
 import { CartProvider, Chrome } from "../components/store";
+import TawkChat from "../components/TawkChat";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <Chrome>{children}</Chrome>
         </CartProvider>
+        <TawkChat />
       </body>
     </html>
   );

@@ -1,8 +1,13 @@
 import "./globals.css";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Fraunces, Archivo } from "next/font/google";
 
-const display = Montserrat({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display" });
-const body = Open_Sans({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-body" });
+const display = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "600", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+});
+const body = Archivo({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-body" });
 
 export const metadata = {
   title: "Bella Scelta | Belleza y autocuidado",

@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Cookies from "js-cookie";
 import { wixClient, STORES_APP_ID, currentCart } from "../lib/wixClient";
+import CookieBanner from "./CookieBanner";
 
 const Ctx = createContext(null);
 export const useCart = () => useContext(Ctx);
@@ -82,6 +83,13 @@ export function Chrome({ children }) {
             <p><Link href="/envios">Envíos y entregas</Link></p>
             <p><Link href="/contacto">Contacto</Link></p>
           </div>
+          <div className="ft__col">
+            <h4>Legal</h4>
+            <p><Link href="/aviso-legal">Aviso legal</Link></p>
+            <p><Link href="/privacidad">Privacidad</Link></p>
+            <p><Link href="/terminos">Términos y condiciones</Link></p>
+            <p><Link href="/cookies">Cookies</Link></p>
+          </div>
         </div>
         <div className="container"><small>© 2026 Bella Scelta. Todos los derechos reservados.</small></div>
       </footer>
@@ -114,6 +122,8 @@ export function Chrome({ children }) {
           </div>
         )}
       </aside>
+
+      <CookieBanner />
     </>
   );
 }

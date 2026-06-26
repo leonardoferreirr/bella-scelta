@@ -196,4 +196,49 @@ ul{margin:0;padding:0;list-style:none}
   .ft__grid{gap:28px}
 }
 
+/* ===== Páginas legales / contenido ===== */
+.legal{max-width:840px;padding-block:clamp(26px,5vw,52px)}
+.legal__back{display:inline-block;margin-bottom:22px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.legal__back:hover{color:var(--rose)}
+.legal h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.04}
+.legal__updated{color:var(--muted);font-size:.88rem;margin:8px 0 30px}
+.legal__lead{font-size:1.08rem;color:#5c5366;margin:6px 0 26px;max-width:640px}
+.legal h2{font-family:var(--font-display),serif;font-weight:900;font-size:clamp(1.3rem,3vw,1.7rem);margin:34px 0 10px;letter-spacing:-.01em}
+.legal h3{font-size:1.02rem;font-weight:700;margin:20px 0 6px}
+.legal p,.legal li{color:#5c5366;font-size:1rem;line-height:1.72}
+.legal p{margin:0 0 14px}
+.legal ul{list-style:disc;padding-left:1.25rem;margin:6px 0 16px}
+.legal li{margin-bottom:8px}
+.legal strong{color:var(--ink)}
+.legal a{color:var(--rose);border-bottom:1px solid transparent;transition:border-color .2s}
+.legal a:hover{border-color:var(--rose)}
+.legal__table{width:100%;table-layout:fixed;border-collapse:collapse;margin:8px 0 18px;font-size:.92rem}
+.legal__table th,.legal__table td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;word-break:break-word}
+@media(max-width:680px){.legal__table{font-size:.82rem}.legal__table th,.legal__table td{padding:8px 7px}}
+.legal__table th{background:var(--lilac);font-weight:700;color:var(--ink)}
+.legal__note{background:var(--peach);border-radius:var(--r);padding:16px 18px;margin:6px 0 18px;font-size:.94rem;color:#5c5366}
+.legal__note strong{color:var(--ink)}
+
+/* ===== Contacto ===== */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:8px 0 10px}
+.contact__card{border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;background:rgba(255,255,255,.5)}
+.contact__card h3{font-family:var(--font-display),serif;font-weight:900;font-size:1.2rem;margin-bottom:6px}
+.contact__card p{margin:0 0 8px;color:#5c5366;font-size:.95rem}
+.contact__card a{color:var(--rose);font-weight:600;word-break:break-word}
+.contact__card a:hover{color:var(--rose-2)}
+
+/* ===== Cookie banner ===== */
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:460px;margin-inline:auto;
+  background:var(--ink);color:#e9e2ef;border-radius:var(--r-lg);padding:22px 24px;box-shadow:0 22px 60px rgba(42,34,48,.4)}
+.cookie p{font-size:.9rem;line-height:1.55;margin:0 0 16px;color:#e9e2ef}
+.cookie a{color:#fff;text-decoration:underline}
+.cookie__row{display:flex;gap:10px}
+.cookie__btn{flex:1;border-radius:999px;padding:.85em 1em;font-weight:600;font-size:.8rem;letter-spacing:.05em;
+  text-transform:uppercase;min-height:46px;transition:background .2s,border-color .2s}
+.cookie__btn--no{background:transparent;border:1.5px solid #6b5f78;color:#e9e2ef}
+.cookie__btn--no:hover{border-color:#e9e2ef}
+.cookie__btn--yes{background:var(--rose);color:#fff}
+.cookie__btn--yes:hover{background:var(--rose-2)}
+@media(max-width:420px){.cookie__row{flex-direction:column}}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}

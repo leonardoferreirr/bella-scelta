@@ -54,10 +54,7 @@ ul{margin:0;padding:0;list-style:none}
     radial-gradient(55% 75% at 88% 18%, var(--lilac), transparent 60%),
     radial-gradient(65% 65% at 72% 96%, var(--peach), transparent 62%),
     var(--paper);}
-.hero__in{position:relative;z-index:2;padding:clamp(60px,10vw,130px) 0 clamp(48px,7vw,96px);max-width:620px}
-.hero__art{position:absolute;z-index:1;right:clamp(20px,5vw,80px);top:50%;transform:translateY(-50%);
-  width:min(36%,430px);aspect-ratio:4/5;object-fit:cover;border-radius:26px;box-shadow:var(--shadow)}
-@media(max-width:900px){.hero__art{display:none}.hero__in{max-width:none}}
+.hero__in{position:relative;z-index:2;padding:clamp(64px,10vw,128px) 0 clamp(48px,7vw,96px);max-width:780px}
 .hero__kicker{font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--rose);margin-bottom:18px}
 .hero h1{font-size:clamp(3rem,9vw,6.4rem);line-height:.92}
 .hero p{margin:1.4rem 0 2rem;max-width:480px;color:#5c5366;font-size:1.08rem}
@@ -184,8 +181,10 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ===== Refinamentos mobile (boas práticas: empilhar + alvos de toque >=44px) ===== */
 @media(max-width:680px){
-  .hero h1{font-size:clamp(2.4rem,8.4vw,3.2rem)}
-  .hero__in{padding-bottom:clamp(36px,6vw,56px)}
+  .hero h1{font-size:clamp(2.4rem,8.4vw,3.2rem);line-height:1.04}
+  .hero__in{padding-top:clamp(40px,9vw,64px);padding-bottom:clamp(40px,7vw,64px)}
+  .hero p{margin:1.2rem 0 1.7rem;font-size:1rem}
+  .btn{padding:1.05em 2em}
   .shead{flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:18px}
   .shead p{max-width:none}
   .cats{gap:9px}

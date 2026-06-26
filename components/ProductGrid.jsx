@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCart, fmt } from "./store";
 
-const sized = (u) => (u ? u.replace(/\/w_\d+,h_\d+,/, "/w_600,h_600,") : u);
 function imgs(p) {
   const items = (p.media?.items || []).map((m) => m?.image?.url).filter(Boolean);
   const main = p.media?.mainMedia?.image?.url;
   const a = items[0] || main || null;
   const b = items[1] || a;
-  return { a: sized(a), b: sized(b) };
+  return { a, b };
 }
 
 export default function ProductGrid({ products }) {
@@ -20,7 +20,7 @@ export default function ProductGrid({ products }) {
         const price = p.price?.price, disc = p.price?.discountedPrice;
         const hasDisc = disc != null && disc < price;
         const { a, b } = imgs(p);
-        const eager = i < 4;
+        const eager = i < 2;
         return (
           <article className="card" key={p._id}>
             <Link href={`/product/${p.slug}`} className="card__link">
@@ -28,8 +28,8 @@ export default function ProductGrid({ products }) {
                 {hasDisc && <span className="ribbon">Oferta</span>}
                 {a ? (
                   <>
-                    <img className="a" src={a} alt={p.name} loading={eager ? "eager" : "lazy"} fetchPriority={eager ? "high" : "auto"} />
-                    <img className="b" src={b} alt="" loading="lazy" />
+                    <Image className="a" src={a} alt={p.name} fill sizes="(max-width:680px) 46vw, (max-width:1000px) 31vw, 23vw" style={{ objectFit: "cover" }} priority={eager} />
+                    <Image className="b" src={b} alt="" fill sizes="(max-width:680px) 46vw, (max-width:1000px) 31vw, 23vw" style={{ objectFit: "cover" }} />
                   </>
                 ) : (<div className="card__ph">BS</div>)}
               </div>

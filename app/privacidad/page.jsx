@@ -18,7 +18,7 @@ export default function Page() {
       <h2>1. Responsable del tratamiento</h2>
       <ul>
         <li><strong>Responsable:</strong> {SITE.legalName}</li>
-        <li><strong>NIF / CIF:</strong> {SITE.nif}</li>
+        <li><strong>Identificación fiscal:</strong> {SITE.nif}</li>
         <li><strong>Domicilio:</strong> {SITE.address}</li>
         <li><strong>Correo electrónico:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
       </ul>

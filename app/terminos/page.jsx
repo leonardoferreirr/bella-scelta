@@ -17,7 +17,7 @@ export default function Page() {
       <h2>1. Identificación del vendedor</h2>
       <ul>
         <li><strong>Titular:</strong> {SITE.legalName}</li>
-        <li><strong>NIF / CIF:</strong> {SITE.nif}</li>
+        <li><strong>Identificación fiscal:</strong> {SITE.nif}</li>
         <li><strong>Domicilio:</strong> {SITE.address}</li>
         <li><strong>Correo electrónico:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
       </ul>

@@ -16,8 +16,8 @@ export default function Page() {
       </p>
       <ul>
         <li><strong>Titular:</strong> {SITE.legalName}</li>
-        <li><strong>Identificación fiscal:</strong> {SITE.nif}</li>
-        <li><strong>Domicilio:</strong> {SITE.address}</li>
+        {SITE.nif ? <li><strong>Identificación fiscal:</strong> {SITE.nif}</li> : null}
+        {SITE.address ? <li><strong>Domicilio:</strong> {SITE.address}</li> : null}
         <li><strong>Correo electrónico:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
         <li><strong>Sitio web:</strong> {SITE.domain}</li>
         {SITE.registro ? <li><strong>Datos registrales:</strong> {SITE.registro}</li> : null}
